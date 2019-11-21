@@ -1,4 +1,3 @@
----
 s0.infra ansible_user=root
 s1.infra ansible_user=root
 s2.infra ansible_user=root
@@ -20,3 +19,4 @@ s3.infra
 # Install NFS server
 [infra4]
 s4.infra
+
