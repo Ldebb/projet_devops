@@ -1,9 +1,0 @@
-vars:¬                                                                             
-   haproxy_app_name: myapp¬                                                         
-   haproxy_mode: http¬                                                              
-   haproxy_enable_stats: enable ¬                                                   
-   haproxy_algorithm: roundrobin¬                                                   
-   haproxy_backend_servers:¬                                                        
-     - {name: s0.infra, ip: 192.168.50.250, port: 80}
-   haproxy_frontend_servers: 
-     - {name: s1.infra, }¬                              

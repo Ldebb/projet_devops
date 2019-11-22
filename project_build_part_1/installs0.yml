@@ -1,5 +1,0 @@
----
-- hosts: control
-  roles:
-    - dnsmasq
-    - haproxy
