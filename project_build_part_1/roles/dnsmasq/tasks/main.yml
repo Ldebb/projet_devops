@@ -1,23 +1,21 @@
 --- 
 - 
-  tasks: 
-    - 
-      apt: 
-        name: dnsmasq
-        state: latest
-      name: "Update to latest DHCP"
-    - 
-      copy: 
-        dest: /etc/dnsmasq.conf
-        src: dnsmasq.conf
-      name: "Copy the DHCP config"
-      notify:
-        - "restart dnsmasq"
-    - name: deploy resol.conf template
-      template:
-        src: roles/dnsmasq/tempates/resolv.conf
-        dest: /etc/resolv.conf
-        owner: root
-        group: root
-        mode: 0644
+  apt: 
+    name: dnsmasq
+    state: latest
+  name: "Update to latest DHCP"
+- 
+  copy: 
+    dest: /etc/dnsmasq.conf
+    src: dnsmasq.conf
+  name: "Copy the DHCP config"
+  notify:
+    - "restart dnsmasq"
+- name: deploy resol.conf template
+  template:
+    src: roles/dnsmasq/tempates/resolv.conf
+    dest: /etc/resolv.conf
+    owner: root
+    group: root
+    mode: 0644
 
