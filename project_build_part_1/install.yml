@@ -1,11 +1,11 @@
 ---
 - name: "[HAPROXY, DNSmasq] - role to install haproxy and dnsmasq"
-  hosts: localhost  # hosts sur lequel fonctionne
+  hosts: s0.infra  # hosts sur lequel fonctionne
   become: yes    # permettre d'avoir une élévation de privilège
   roles:
-    - haproxy
     - dnsmasq
+    - haproxy
   tags:
-    - haproxy
     - dnsmasq
+    - haproxy
 

@@ -6,14 +6,14 @@
   name: "Update to latest DHCP"
 - 
   copy: 
+    src: dnsmasq.conf.j2
     dest: /etc/dnsmasq.conf
-    src: dnsmasq.conf
   name: "Copy the DHCP config"
   notify:
     - "restart dnsmasq"
 - name: deploy resol.conf template
   template:
-    src: roles/dnsmasq/tempates/resolv.conf
+    src: roles/dnsmasq/templates/resolv.conf.j2
     dest: /etc/resolv.conf
     owner: root
     group: root
